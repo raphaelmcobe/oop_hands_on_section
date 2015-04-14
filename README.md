@@ -42,30 +42,30 @@ should be warned of his/her current situation.
 funds to perform the requested operation. Exceptions in Python are sub-classes of the basic
 exception *Exception*:
 
-```python
-class NotEnoughFundsException(Exception):
-    def __init__(self, message):
-        self.value = message        
-```
-
-In order to signal the exceptional behaviour use the `raise` command:
-
-```python
-if balance <= amount:
-    raise NotEnoughFundsException("Check your Balance before")
-```
-
-In order to deal with the exceptional behaviour use the `try: .. except .. ` construction:
-
-```python
-try:
-    account.withdraw(amount)
-except NotEnoughFundsException:
-    print("Dear client, you should check your balance before performing this operation")
-```
-
-**Question: ** Which class do you think should be responsible for raising the exception and which
-should be responsible for dealing with it?
+    ```python
+    class NotEnoughFundsException(Exception):
+        def __init__(self, message):
+            self.value = message        
+    ```
+    
+    In order to signal the exceptional behaviour use the `raise` command:
+    
+    ```python
+    if balance <= amount:
+        raise NotEnoughFundsException("Check your Balance before")
+    ```
+    
+    In order to deal with the exceptional behaviour use the `try: .. except .. ` construction:
+    
+    ```python
+    try:
+        account.withdraw(amount)
+    except NotEnoughFundsException:
+        print("Dear client, you should check your balance before performing this operation")
+    ```
+    
+    **Question: ** Which class do you think should be responsible for raising the exception and which
+    should be responsible for dealing with it?
 
 7. Implement a new exception in case an operation resulted in a fee. Present a message for the
 client if that is the case.

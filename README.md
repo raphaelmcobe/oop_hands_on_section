@@ -4,7 +4,7 @@
 The main goal of this hands on section is to build an atm machine simulator. You should check out
 this github project into your home dir. 
 
-The project counts with a single file, a ***python3*** module that holds the classes for the ATM
+The project counts with a single file, a **python3** module that holds the classes for the ATM
 Machine itself and the Account class.
 
 
@@ -62,7 +62,15 @@ try:
     account.withdraw(amount)
 except NotEnoughFundsException:
     print("Dear client, you should check your balance before performing this operation")
+```
 
+**Question: ** Which class do you think should be responsible for raising the exception and which
+should be responsible for dealing with it?
 
-7. Implement the bank statement functionality. Each operation should be logged at an special list of
-Transaction objects (create the class). For each transaction
+7. Implement a new exception in case an operation resulted in a fee. Present a message for the
+client if that is the case.
+
+8. Implement the bank statement functionality. Each operation should be logged at an special list of
+Transaction objects (create the `Transaction` class). For each transaction you shoud log the type of
+transaction and also the date. Update the menu and the ATMMachine classe to support this new
+operation.

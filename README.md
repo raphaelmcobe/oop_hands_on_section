@@ -2,7 +2,7 @@
 
 ## ATM machine simulator
 The main goal of this hands on session is to build an atm machine simulator. You should download the
-[atm_simulator.py](oop_hands_on_session/blob/master/atm_machine.py) module into your home dir. 
+[atm_simulator.py](atm_machine.py) module into your home dir. 
 
 The project counts with a single file, a **python3** module that holds the classes for the ATM
 Machine itself and the Account class.

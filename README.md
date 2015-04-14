@@ -73,5 +73,5 @@ client if that is the case.
 
 8. Implement the bank statement functionality. Each operation should be logged at an special list of
 Transaction objects (create the `Transaction` class). For each transaction you shoud log the type of
-transaction and also the date. Update the menu and the ATMMachine classe to support this new
+transaction and also the date. Update the menu and the ATMMachine class to support this new
 operation.

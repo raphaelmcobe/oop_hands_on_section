@@ -14,9 +14,39 @@ Machine itself and the Account class.
 In this assignment you should fill the missing methods and check if the ATM machine is functioning
 correctly.
 
-2. Create sub-classes:
-In this assignment you have to create two specializations for the Account class:
+2. Design a solution for generating the Account number. Check-out the random() operation. Is that a
+good way to generate accounts numbers? Can you guarantee that no number appears twice?
+    * Think of alternative ways to store the latest account number and derive the next one from it.
+
+3. For each operation you have to go through (possibly) the whole list of accounts in order to
+retrieve the account which number has been passed as a parameter. Do you really need to do this?
+Think about the data structures presented in previous classes. Is there a better way to perform this
+search?
+
+
+4. Create the following sub-classes:
+In this assignment you have to create two specializations for the Account class (the corresponding
+operations should be rewritten):
     * CheckingAccount: This class has the following restrictions:
-        * Only 4 free transfers. There is a tax value of 5.0 for each transfer after the 4th. 
+        * Only 4 free transfers. There is a fee value of 5.0 for each transfer after the 4th.
+        * Only 5 free balance checking operation. There is a fee value of 1.00 after the 5th balance 
+        checking operation.
     * SavingsAccount: This class has the following restrictions:
-        * Only 3 free withdrawals. There is a tax value of 2.00 for each withdrawal after the 3rd. 
+        * Only 3 free withdrawals. There is a fee value of 2.00 for each withdrawal after the 3rd. 
+        * No free transfer. Each transfer has a fee value of 1.00.
+
+5. Check if the account balance allow the requested operation. If it is not the case, the user
+should be warned of his/her current situation.
+
+6. Enhance your balance checking structure by adding Exceptions, in case the client has not enough
+funds to perform the requested operation. Exceptions in Python are sub-classes of the basic
+exception *Exception*:
+
+```python
+class MyException(Exception):
+    def __init__(self, message):
+        self.value = message        
+```
+
+7. Implement the bank statement functionality. Each operation should be logged at an special list of
+Transaction objects (create the class). For each transaction

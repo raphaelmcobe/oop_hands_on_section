@@ -4,8 +4,8 @@
 The main goal of this hands on session is to build an atm machine simulator. You should download the
 [atm_simulator.py](atm_machine.py) module into your home dir. 
 
-The project counts with a single file, a **python3** module that holds the classes for the ATM
-Machine itself and the Account class.
+The project counts with a single file, a **python3** module that holds the classes for the
+`ATMMachine` itself and the `Account` class.
 
 
 ## Assignments
@@ -40,7 +40,7 @@ should be warned of his/her current situation.
 
 6. Enhance your balance checking structure by adding Exceptions, in case the client has not enough
 funds to perform the requested operation. Exceptions in Python are sub-classes of the basic
-exception *Exception*:
+exception `Exception`:
 
     ```python
     class NotEnoughFundsException(Exception):

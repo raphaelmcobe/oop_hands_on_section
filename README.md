@@ -64,7 +64,7 @@ exception *Exception*:
         print("Dear client, you should check your balance before performing this operation")
     ```
     
-    **Question: ** Which class do you think should be responsible for raising the exception and which
+    **Question:** Which class do you think should be responsible for raising the exception and which
     should be responsible for dealing with it?
 
 7. Implement a new exception in case an operation resulted in a fee. Present a message for the

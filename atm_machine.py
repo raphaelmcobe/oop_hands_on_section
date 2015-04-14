@@ -35,7 +35,7 @@ class Account(object):
     def __init__(self, account_number, clients_name, initial_balance = 0.0):
         self.account_number = account_number
         self.clients_name = clients_name
-        self.initial_balance = initial_balance
+        self.balance = initial_balance
 
     def withdraw(self, amount):
         """Withdraw some money!"""

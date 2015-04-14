@@ -43,10 +43,26 @@ funds to perform the requested operation. Exceptions in Python are sub-classes o
 exception *Exception*:
 
 ```python
-class MyException(Exception):
+class NotEnoughFundsException(Exception):
     def __init__(self, message):
         self.value = message        
 ```
+
+In order to signal the exceptional behaviour use the `raise` command:
+
+```python
+if balance <= amount:
+    raise NotEnoughFundsException("Check your Balance before")
+```
+
+In order to deal with the exceptional behaviour use the `try: .. except .. ` construction:
+
+```python
+try:
+    account.withdraw(amount)
+except NotEnoughFundsException:
+    print("Dear client, you should check your balance before performing this operation")
+
 
 7. Implement the bank statement functionality. Each operation should be logged at an special list of
 Transaction objects (create the class). For each transaction

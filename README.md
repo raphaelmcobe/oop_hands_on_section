@@ -61,7 +61,8 @@ exception *Exception*:
     try:
         account.withdraw(amount)
     except NotEnoughFundsException:
-        print("Dear client, you should check your balance before performing this operation")
+        print("Dear client, you should check your balance 
+            before performing this operation")
     ```
     
     **Question:** Which class do you think should be responsible for raising the exception and which

@@ -27,11 +27,11 @@ search?
 4. Create the following sub-classes:
 In this assignment you have to create two specializations for the `Account` class (the corresponding
 operations should be rewritten):
-    * CheckingAccount: This class has the following restrictions:
+    * `CheckingAccount`: This class has the following restrictions:
         * Only 4 free transfers. There is a fee value of 5.0 for each transfer after the 4th.
         * Only 5 free balance checking operation. There is a fee value of 1.00 after the 5th balance 
         checking operation.
-    * SavingsAccount: This class has the following restrictions:
+    * `SavingsAccount`: This class has the following restrictions:
         * Only 3 free withdrawals. There is a fee value of 2.00 for each withdrawal after the 3rd. 
         * No free transfer. Each transfer has a fee value of 1.00.
 
